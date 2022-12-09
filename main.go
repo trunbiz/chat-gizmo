@@ -2,10 +2,9 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"./controllers"
 )
 
-func setRouter() *gin.Engine{
+func setRouter() *gin.Engine {
 	router := gin.Default()
 	api := router.Group("/api")
 	{
@@ -14,7 +13,7 @@ func setRouter() *gin.Engine{
 				"message": "test successful",
 			})
 		})
-		api.POST("/chat/message", )
+		api.POST("/chat/message")
 	}
 	return router
 }
